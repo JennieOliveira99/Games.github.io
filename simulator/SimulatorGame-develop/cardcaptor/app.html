@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captor Card</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="jogo.js"></script>
+</head>
+
+<body onresize="ajustatamanhopalcojogo()" onclick="iniciarMusica()">
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="imagens/coracao_cheio.png" height="70px" width="60px">
+            <img id="v2" src="imagens/coracao_cheio.png" height="70px" width="60px">
+            <img id="v3" src="imagens/coracao_cheio.png" height="70px" width="60px">
+        </div>
+        <div class="cronometro"> Tempo restante : <span id="cronometro"></span></div>
+    </div>
+
+    <audio id="background-music" preload="auto" loop>
+        <source src="audio4.mp4" type="audio/mp4">
+      </audio>
+
+    <script>
+        function iniciarMusica() {
+            var audio = document.getElementById('background-music');
+            audio.play();
+            // Remover o evento de clique após a reprodução iniciar
+            document.body.removeEventListener('click', iniciarMusica);
+        }
+
+        // Adicionar um ouvinte de clique para iniciar a música
+        document.body.addEventListener('click', iniciarMusica);
+
+        
+        document.getElementById('cronometro').innerHTML = tempo
+        var criacard = setInterval(function () {
+            posicaoRandomica()
+        }, intervalocriacard)
+    </script>
+
+</body>
+
+</html>

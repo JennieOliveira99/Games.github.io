@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden; /* Para garantir que o botão seja visível mesmo se a página tiver rolagem */
+}
+
+.game-board {
+  position: relative;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: rgb(1, 12, 24);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.game-board {
+  width: 100%;
+  height: 500px;
+  border-bottom: 20px solid rgb(1,12,24);
+  margin: 0 auto;
+  position: relative; /* Para que respeite os limites das bordas */
+  overflow: hidden; /* Para que tudo que sair das bordas do quadro não apareça mais na tela */
+  background: linear-gradient(
+    #eb87eb,
+    #233e4e
+  );
+}
+
+.gojo {
+  position: absolute; /* Para que uma img não interfira no comportamento da outra img */
+  bottom: 0;
+  width: 150px;
+  animation: gojo-animation 1.5s infinite linear; /* Para chamar a animação feita logo abaixo com a duração de 2 segundos rodando infinito e constante (linear) sem desaceleração na velocidade */
+}
+
+.geto {
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+}
+
+.jump {
+  animation: jump 950ms ease-out; /* Para chamar a animação do pulo, ease-out para ele cair suavemente após pular */
+}
+
+.clouds {
+  position: absolute;
+  width: 400px;
+  animation: clouds-animation 20s infinite linear;
+}
+
+.cogumelo {
+  position: absolute;
+  width: 100px;
+  animation: cogumelo-animation 10s infinite linear;
+  bottom: 75%;
+}
+
+/* Animação do cano iniciando pela direita do quadro e sumindo quando chegar na borda esquerda */
+
+@keyframes gojo-animation {
+  from {
+    right: 0; /* Para iniciar a animação no canto direito */
+  }
+  to {
+    right: 100%; /* Para sair fora da borda esquerda e sumir da tela */
+  }
+}
+
+/* Animação do pulo */
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  40% {
+    bottom: 185px;
+  }
+
+  45% {
+    bottom: 185px;
+  }
+
+  50% {
+    bottom: 205px;
+  }
+
+  55% {
+    bottom: 185px;
+  }
+
+  60% {
+    bottom: 185px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+/* Animação das nuvens */
+
+@keyframes clouds-animation {
+  from {
+    right: -400px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+/* Animação cogumelo */
+@keyframes cogumelo-animation {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: 100%;
+  }
+}

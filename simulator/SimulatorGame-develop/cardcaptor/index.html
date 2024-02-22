@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Captor</title>
+    <link rel="stylesheet" href="estilo.css">   
+   
+    <script>
+        function iniciaJogo() {
+            if (document.getElementById('nivel').value == "") {
+                alert("Selecione um Nivel")
+                return false
+            } else {
+                nivel = document.getElementById('nivel').value
+                window.location.href = "app.html?" + nivel
+            }
+        }
+    </script>
+</head>
+
+<body >
+
+    <div id="container">
+        <div id="corpo">
+            <img src="imagens/card.png" alt="img" height="450px">
+            <br>
+
+            <select id="nivel" name="nivel" id="nivel">
+                <option value="" selected>--Selecione um nivel ---</option>
+                <option value="normal">Normal</option>
+                <option value="medio">Medio</option>
+                <option value="dificil">Dificil</option>
+            </select>
+            <br>
+            <input type="button" onclick="iniciaJogo()" class="btn_jogo" value="Jogar">
+          
+
+        </div>
+    </div>
+</body>
+
+</html>

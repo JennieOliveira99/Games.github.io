@@ -1,0 +1,81 @@
+html {
+    cursor: url('imagens/baculo.png') 40 40, auto
+}
+
+body{
+    background: no-repeat url(imagens/bg.jpg);
+}
+#corpo{
+    text-align: center;
+}
+
+.btn_jogo{
+    padding: 10px 20px;
+    font-size: 1.3em;
+    margin-top: 7px;
+    background: linear-gradient(to bottom right, #ee9cee, #d9eb9a);
+    color: rgb(13, 37, 35);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    animation: teste 1.5s infinite ease-in-out;
+    margin-right: 15px;
+    cursor: url('imagens/baculo.png') 40 40, auto
+}
+
+.btn_jogoo{
+    padding: 10px 20px;
+    font-size: 1.3em;
+    margin-top: 7px;
+    background: linear-gradient(to bottom right, #3498db, #ee9cee);
+    color: rgb(13, 37, 35);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    animation: teste 1.5s infinite ease-in-out;
+    margin-right: 15px;
+    cursor: url('imagens/baculo.png') 40 40, auto
+}
+
+#nivel{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: auto;
+    cursor: pointer;
+}
+
+@keyframes teste {
+    50% {
+transform: translateY(-10%);
+    }
+  }
+ 
+
+.card1{
+    width: 80px;
+    height: 150px;
+}
+.card2{
+    width: 80px;
+    height: 150px;
+}
+.card3{
+  width: 80px;
+    height: 150px;
+}
+
+.lado2{
+    transform: scaleX(-1);
+}
+.painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    bottom: 450px;
+    left: 0px;
+    border: solid 1px #fff;
+    background: rgba(255, 255, 255, 0.3)
+}
+.cronometro{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}

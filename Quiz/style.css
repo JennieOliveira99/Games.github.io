@@ -1,0 +1,115 @@
+/*formatando a zero a page
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+body{
+    background-image: url(bg2.png);
+    background-size: 100%;
+    color: fff;
+    height: 100vh; /*para ocupar toda a altura da tela*/
+
+    /*centralizando os itens*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*estilizando o container(fazendo o quadrado central */
+.container{
+    /*colocar o fadding*/
+    background:rgba(255,255,255,0.5);
+    width: 90%;
+    max-width: 800px;
+    border: 2px solid #54547c;
+    border-radius: 6px;
+    /*colocando distancia interior, entre elementos e a borda*/
+    padding: 16px;
+
+    /*centralizando os elementos de dentro*/
+    display: flex;
+    flex-direction: column;/*deixa quatro botoes em cima e dois embaixo*/
+    justify-content: center;
+    align-items: center;
+}
+
+.questions-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;/*espacamento entre elementos*/
+}
+/*estilizando os textos de perguntas*/
+.question{
+    font-size: 24px;
+    color: #161630;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*estilizando as respostas dos botoes*/
+.answers-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .next-question{
+    margin-top: 32px;
+  }
+
+  .button{
+    background-color: rgb(151, 48, 202);
+    color: #e1e1e6;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 6px;
+    height: 48px;
+    padding: 0 32px;
+    /*adcionando transicao do efeito transition filter*/
+    transition: filter 0.5s;
+  }
+
+  .button:not(:disable):hover{
+    filter: brightness(0.8);
+  }
+
+  /*configurando a classe hide, ou seja, os itens que irao ser "escondidos" no html"
+     <button class="next-question button hide">Próxima pergunta</button>
+     <div class="questions-container hide">*/
+
+.answer:disabled{
+    cursor: not-allowed;
+}
+  .hide{
+    display: none;
+ }
+
+ .correct{
+    background-color: #59a193;
+ }
+
+ .incorrect{
+    background-color: #f85b7a;
+ }
+
+.final-message{
+    color: #232356;
+
+}
+.final-message span{
+    display: block;
+    margin-top: 8px;
+}

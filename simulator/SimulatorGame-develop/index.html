@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/estilo.css">
+   <!-- Adicionando um áudio MP4 -->
+   <audio id="background-music" preload="auto" loop>
+    <source src="audio4.mp4" type="audio/mp4">
+  </audio>
+   <title>Captor Sakura Card</title>
+</head>
+
+<body class="background1">
+
+  <div id="text-container">
+    <img id="image-container" src="img/imagem4.png" alt="png das personagens" style="border: none;">
+    
+    <p id="display-text" class="typing-animation">Essa história é uma homenagem à magia e à amizade de Sakura Card Captors.</p>
+  </div>
+  <button id="change-button" onclick="changeTextAndBackground()">Avançar</button>
+
+
+  <script>
+    let textIndex = 0;
+    const backgrounds = ["img/sala.jpg", "img/sala.jpg",
+      "img/banheiro.jpg", "img/patio.jpg", "img/biblio3.jpg",
+      "img/biblio3.jpg", "img/patio3.jpg", "img/patio3.jpg",
+      "img/cardpower.jpg", "img/cardpower.jpg", "img/cardpower.jpg",
+      "img/cardpower.jpg", "img/patio2.jpg", "img/sky.jpg", "img/patio2.jpg",
+      "img/sky2.jpg", "img/cardpower.jpg", "img/cardpower.jpg"];
+
+    const texts = ["Sakura e Tomoyo estão na Escola Tomoeda. Ao final da aula, Sakura sente uma presença mágica estranha.",
+      "SAKURA: Ei Tomoyo, algo está errado. Sinto uma carta Clow por perto.",
+      "TOMOYO: Vamos, Sakura! Se troque no banheiro e vamos investigar!",
+      "Sakura troca de traje e as duas seguem a presença mágica até a biblioteca.",
+      "SAKURA: Aqui é o lugar. Deve estar escondida entre os livros!",
+      "Sakura vê uma carta flutuando no ar, indo em direção à janela, ela e Tomoyo correm atrás da carta, saindo da escola.",
+      "TOMOYO: Tenho minha câmera pronta, Sakura. Faça isso com estilo!",
+      "TOMOYO: Lá está ela!",
+      "Enquanto Sakura se aproxima para selar a carta, ela e Tomoyo são envolvidas por uma luz mágica.",
+      "TOMOYO: Sakura, cuidado!",
+      "A carta emite uma luz intensa e cria um redemoinho mágico, puxando sakura e Tomoyo.",
+      "Sakura com seu báculo protege Tomoyo, sendo Sakura puxada para dentro da carta.",
+      "TOMOYO: Sakura! Não se preocupe, vou lutar para te libertar!",
+      "Tomoyo, corajosa, puxa uma carta Clow de sua bolsa.",
+      "TOMOYO:(determinada) Preciso ser forte por você, Sakura!",
+      "Suas palavras regadas de determinação invocam da carta Clow o báculo de Sakura.",
+      "Ele cai dos céus nas mãos de Tomoyo, que se prepara para capturar a carta.",
+      "Ajude Tomoyo a recuperar a carta que está aprisionando Sakura."
+
+    ];
+
+
+  function changeTextAndBackground() {
+    const body = document.body;
+    const displayText = document.getElementById("display-text");
+    const imageContainer = document.getElementById("image-container");
+    const audio = document.getElementById("background-music");
+
+  if (textIndex < texts.length && textIndex < backgrounds.length) {
+    // Se for a primeira vez que o botão é clicado, inicie a reprodução de áudio
+    if (textIndex === 0) {
+      audio.play();
+    }
+    displayText.textContent = texts[textIndex];
+    //criando efeito de digitação em cada vez que trocar a frase e background
+    displayText.textContent = "";
+        displayText.className = "typing-animation";
+        typeText(texts[textIndex]);
+        textIndex++;
+
+    // Adiciona uma imagem PNG correspondente ao texto atual
+    const currentImageSrc = `img/imagem${textIndex + 1}.png`;
+    imageContainer.src = currentImageSrc;
+    imageContainer.style.border = 'none';
+
+    // Configura o fundo da página
+    body.style.backgroundImage = `url('${backgrounds[textIndex]}')`;
+
+    textIndex++;
+
+    // Verifica se chegou ao último diálogo
+    if (textIndex === texts.length) {
+      
+      document.getElementById("change-button").disabled = true;
+    }
+  }
+}
+
+ // Função para realizar a animação de digitação do texto
+ function typeText(text) {
+  isTypingAnimationInProgress = true;
+  const displayText = document.getElementById("display-text");
+  let index = 0;
+  const typingInterval = setInterval(() => {
+    displayText.textContent += text[index];
+    index++;
+    if (index === text.length) {
+      clearInterval(typingInterval);
+      isTypingAnimationInProgress = false;
+    }
+  }, 20); // Intervalo ajustado para 30 milissegundos
+}
+
+
+  </script>
+
+<a href="cardcaptor/index.html"> <button class="play">Ir para o jogo</button></a>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Game</title>
+    <style>
+        body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(
+    #eb87eb,
+    #233e4e
+  );
+}
+
+
+#container {
+    text-align: center;
+}
+
+#corpo {
+    display: inline-block;
+}
+
+img {
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    border-radius: 10px; /* Adiciona bordas arredondadas à imagem */
+}
+
+.btn_jogoo {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(#eb87eb, #233e4e );
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px; /* Espaço superior entre a imagem e o botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo */
+}
+
+.btn_jogoo:hover {
+    background-color: #052a42; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Adiciona uma animação giratória na imagem */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+img:hover {
+    animation: rotate 1s linear infinite; /* Aplica a animação ao passar o mouse sobre a imagem */
+}
+
+    </style> 
+     
+</head>
+<body>
+    <div id="container">
+        <div id="corpo">
+          
+            <img src="img/game-over.png" alt="img" height="400px">
+            
+
+            <a href="index.html"> <button class="btn_jogoo">Start Game</button></a>
+
+    </div>
+    </div>
+    
+</body>
+</html>

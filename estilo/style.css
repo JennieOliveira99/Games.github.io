@@ -1,0 +1,192 @@
+/* Estilizações Universais------------------------------------------------------------------------------------------------*/
+body {
+  background-color: #202529;
+}
+.h1-titulos {
+  margin-top: 50px;
+}
+
+.texto-white {
+  margin-top: 20px;
+}
+/*HOMEEEEEEEEEEEE -------------------------------------------------------------------------------------------*/
+.body-home {
+  background-color: #202529;
+}
+
+.article-home {
+  padding: 20px;
+}
+#gif {
+  margin-top: 50px;
+  height: 500px;
+  animation: teste 2.5s infinite ease-in-out;
+  display: block;
+  margin-inline-end: 100px;
+}
+
+@keyframes teste {
+  50% {
+    transform: translateY(-10%);
+  }
+}
+
+/*SOBREEE----------------------------------------------------------------------------------------------*/
+.body-sobre {
+  background-color: #202529;
+  padding: 20px;
+}
+.section-textos {
+  margin-bottom: 20px;
+}
+.h2-sobre {
+  color: #fff;
+  font-size: 30px;
+}
+
+.texto-sobre {
+  color: #fff;
+}
+/*JOGOSSSSSSS------------------------------------------------------------------------------------------*/
+
+.article-jogos {
+  padding: 20px;
+  background-color: #202529;
+}
+
+.h2-jogos {
+  color: #fff;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.Texto-jogos {
+  color: #fff;
+  margin-left: 50px;
+}
+
+/*CARDS COMECAM AQUI*/
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
+}
+
+.card-container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  border-radius: 20px;
+}
+
+.card-container:hover .box {
+  transform: rotateY(25deg);
+}
+
+.card-container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+
+.card-container .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card-container .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-container .box .imgBx:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(111, 28, 114), #000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+
+.card-container .box:hover .imgBx:before {
+  opacity: 1;
+}
+
+.card-container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+
+.card-container .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+
+.card-container .box:hover .content h2 {
+  transform: translateY(0px);
+}
+
+.card-container .box .content a {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 32px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+
+.card-container .box:hover .content a {
+  transform: translateY(0px);
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

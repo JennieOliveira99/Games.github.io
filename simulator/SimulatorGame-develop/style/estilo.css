@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*primeiro background antes de carregar as fuções*/
+.background1{
+  background-image: url('img/cardpower.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    transition: background 0.5s ease-in-out;
+  }
+
+
+
+  #text-container {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 35px;
+    font-size: large;
+    font-style: initial;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+   
+  }
+
+  /* efeito digitação*/
+  #display-text {
+    overflow: hidden;
+    border-right: 0.15em solid rgb(0, 255, 115); 
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+  
+
+  
+  #image-container {
+    border: none;
+    outline: none;
+    width: 330px;
+    height: 430px;
+    animation: teste 3.5s infinite ease-in-out;
+    display: block;
+  }
+  
+ 
+
+  #change-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    animation: teste 2.5s infinite ease-in-out;
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+  
+  }
+  /*add o cursor bloqueado para evidenciar que nao pra clicar no botao avançar no final*/
+  #change-button:disabled,
+  #change-button.disable {
+    cursor: not-allowed;
+  }
+  
+  
+
+  #change-button:hover {
+    background-color: #3498db;
+  }
+  .play{
+    padding: 5px 5px;
+    font-size: 11px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #bbd4e4, #f3edf3);
+    color: rgb(100, 75, 75);
+    border: 1px solid #ffffff; /* Adiciona uma borda branca à volta do botão */
+    margin-bottom: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .play:hover{
+    background-color: #db3490;
+  }
+
+  @keyframes teste {
+    50% {
+transform: translateY(-10%);
+    }
+  }
+ 
