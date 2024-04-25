@@ -169,34 +169,34 @@ function selectAnswer(event) {
 
 const questions = [
     {
-      question: "Quem foi a pessoa responsável por criar a linguagem  FLOW-MATIC que serviu de base para a criação da linguagem COBOL?",
+      question: "Qual é o nome completo do protagonista de Blue Exorcist?",
       answers: [
-        { text: "Bob Bemer", correct: false },
-        { text: "Mary Kenneth Keller", correct: false },
-        { text: "Grace Hopper", correct: true },
-        { text: "Tim Berners-Lee", correct: false }
+        { text: "Yukio Okumura", correct: false },
+        { text: "Shiro Fujimoto", correct: false },
+        { text: "Rin Okumura", correct: true },
+        { text: "Yuri Egin", correct: false }
       ]
     },
     {
-      question: "Quem foi responsável por desenvolver o primeiro algoritmo interpretado por uma máquina, sendo assim, o primeiro programador da história?",
+      question: "Qual é o nome do irmão mais velho de Rin e Yukio, que é um personagem importante na série?",
       answers: [
-        { text: "Ada Lovelace", correct: true },
-        { text: "James Gosling", correct: false },
-        { text: "Richard Stallman", correct: false },
-        { text: "Alan Turing", correct: false }
+        { text: 'Yukio Okumura', correct: true },
+        { text: 'Haruto Okumura', correct: false },
+        { text: 'Ren Yamamoto', correct: false },
+        { text: "Hiroshi Okumura", correct: false }
       ]
     },
     {
-      question: ' Quem foi responsável por calcular a trajetória de voo para a missão de primeiro pouso na lua, feito pelo Apolo 11?',
+      question: ' Qual é o objetivo de Rin ao longo da série?',
       answers: [
-        { text: 'Katherine Johnson', correct: true },
-        { text: 'Hedy Lamarr', correct: false },
-        { text: 'Roberta Williams', correct: false },
-        { text: "Nenhuma das alternativas", correct: false }
+        { text: 'Tornar-se o exorcista mais forte', correct: true },
+        { text: 'Tornar-se o rei dos exorcistas', correct: false },
+        { text: 'Derrotar o exorcista mais forte', correct: false },
+        { text: "Encontrar seu pai", correct: false }
       ]
     },
     {
-      question: 'O primeiro  primeiro computador digital programável do mundo(ENIAC) foi desenvolvida por uma equipe majoritariamente feminina.',
+      question: 'O mentor de Rin e Yukio na Academia da Verdadeira Cruz é o Shiro Fujimoto.',
       answers: [
         { text: "Verdadeiro", correct: true },
         { text: "Falso", correct: false}
@@ -212,21 +212,21 @@ const questions = [
       ]
     },
     {
-      question: 'Quem foi responsável por descobrir a base para a tecnologia do Wi-F?',
+      question: 'Qual é o nome da espada sagrada de Rin?',
       answers: [
-        { text: 'Cheng Wei', correct: false },
-        { text: 'Hedy Lamarr', correct: true },
-        { text: 'Bill Gates', correct: false },
-        { text: 'Anne Aaron', correct: false }
+        { text: 'Excalibur', correct: false },
+        { text: 'Kurikara', correct: true },
+        { text: 'Masamune', correct: false },
+        { text: 'Muramasa', correct: false }
       ]
     },
     {
-      question: 'Quem desenvolveu os sistemas de processamento de imagem em formatos de mídia digital usados nos primeiros anos do programa de satélites da NASA?',
+      question: 'Qual é o título completo do anime "Blue Exorcist" em japonês?',
       answers: [
-        { text: 'Gladys Mae West ', correct: false },
-        { text: 'Edith Clarke ', correct: false },
-        { text: 'Kathy Kleiman ', correct: false },
-        { text: 'Valerie Thomas', correct: true },
+        { text: 'Oni no Exorcist', correct: false },
+        { text: 'Shinigami no Exorcist', correct: false },
+        { text: 'Akuma no Exorcist', correct: false },
+        { text: 'Ao no Exorcist', correct: true },
       ]
     },
   ]

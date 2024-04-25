@@ -45,22 +45,25 @@ img {
 }
 
 .btn_jogoo:hover {
-    background-color: #052a42; /* Cor de fundo do botão ao passar o mouse */
+    background-color: #b5c4ce; /* Cor de fundo do botão ao passar o mouse */
+    color: #680768;
 }
-
-/* Adiciona uma animação giratória na imagem */
-@keyframes rotate {
+@keyframes moveUpDown {
     0% {
-        transform: rotate(0deg);
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Move para cima */
     }
     100% {
-        transform: rotate(360deg);
+        transform: translateY(0); /* Volta para baixo */
     }
 }
 
 img:hover {
-    animation: rotate 1s linear infinite; /* Aplica a animação ao passar o mouse sobre a imagem */
+    animation: moveUpDown 1s ease-in-out infinite; /* Aplica a animação ao passar o mouse sobre a imagem */
 }
+
 
     </style> 
      
@@ -69,7 +72,7 @@ img:hover {
     <div id="container">
         <div id="corpo">
           
-            <img src="img/game-over.png" alt="img" height="400px">
+            <img src="img/gojo1.png" alt="img" height="400px">
             
 
             <a href="index.html"> <button class="btn_jogoo">Start Game</button></a>

@@ -12,24 +12,30 @@ button {
 }
 
 body{
-    background-image: url(bg2.png);
-    background-size: 100%;
-    color: fff;
-    height: 100vh; /*para ocupar toda a altura da tela*/
+   
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(imh.gif);
+    background-size: cover;
+    color: #fff; /* Cor do texto */
+    height: 100vh; /* Para ocupar toda a altura da tela */
 
-    /*centralizando os itens*/
-
+    /* Centralizando os itens */
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
+
 /*estilizando o container(fazendo o quadrado central */
 .container{
     /*colocar o fadding*/
-    background:rgba(255,255,255,0.5);
+    background-color: #f0f0f0cc;
+    box-shadow: 8px 8px 16px #d0d0d0,
+            -8px -8px 16px #ffffff;
     width: 90%;
     max-width: 800px;
-    border: 2px solid #54547c;
+  /*  border: 2px solid #54547c;*/
     border-radius: 6px;
     /*colocando distancia interior, entre elementos e a borda*/
     padding: 16px;
@@ -40,6 +46,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 
 .questions-container{
     width: 100%;
@@ -70,8 +77,10 @@ body{
   }
 
   .button{
-    background-color: rgb(151, 48, 202);
-    color: #e1e1e6;
+    background-color: #f0f0f0;
+    box-shadow: 8px 8px 16px #d0d0d02a,
+                -8px -8px 16px #79616181;
+    color: #242466;
     font-size: 16px;
     font-weight: bold;
     border: 0;
@@ -98,11 +107,12 @@ body{
  }
 
  .correct{
-    background-color: #59a193;
+    background-color: #39d7ff;
  }
 
  .incorrect{
-    background-color: #f85b7a;
+    background-color: #362e2f;
+    color: #6e6768;
  }
 
 .final-message{
