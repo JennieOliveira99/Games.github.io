@@ -30,10 +30,7 @@ Ao final, o jogador entra em outro jogo onde deverá capturar a carta onde Sakur
   
 ## 🌟🌟🌟Ilustrações:
 
-Ilustrações originais, acompanhe meu trabalho também no Instagram: 
- <br>
- <a href="https://instagram.com/_houdishelii" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-
+Ilustrações originais.
 ## 🌟🌟🌟Prints
 ![tomoyo](https://github.com/JennieOliveira99/SimulatorGame/assets/117695086/7e5ca9c5-695a-4d89-b924-9afe925d46da)
 
